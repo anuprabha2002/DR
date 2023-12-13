@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Styled Table Example</title>
+  </head>
+  <body>
+    <header>
+      <h1>RedLabel</h1>
+    </header>
+
+    <div class="container">
+      <h2>Product Details</h2>
+
+      <form id="productForm">
+        <label for="serialNumber">Serial Number:</label>
+        <input type="text" id="serialNumber" name="serialNumber" />
+
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" />
+
+        <label for="dimension">Dimension:</label>
+        <input type="text" id="dimension" name="dimension" />
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" />
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" />
+
+        <button type="button" onclick="addProduct()">Add Product</button>
+      </form>
+
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Company Name</th>
+            <th>Dimension</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Sum</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Existing rows will be appended here -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5" class="total-label">Total:</td>
+            <td id="grandTotal" class="total-amount">$0.00</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
